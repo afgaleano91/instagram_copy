@@ -15,11 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.http import HttpResponse
-
-def hello_world(request):
-    return HttpResponse('hello, world')
+from instagramCopy import views
 
 urlpatterns = [
-    path('hello-world/', hello_world ),
+    path('hello-world/', views.hello_world ),
+    path('new/', views.hi ),
 ]
